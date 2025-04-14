@@ -47,7 +47,7 @@ Voici un aperçu du **modèle de données** utilisé dans le projet :
 
 ## 📸 Aperçu de l'application
 
-Vous pouvez directement scanner ce qr code pour tester l'application :
+Vous pouvez directement scanner ce qr code sur l'application Expo Go pour tester l'application :
 ![image](https://github.com/user-attachments/assets/77c20645-6ab6-4320-8e98-8cab7a8b9c99)
 
 
