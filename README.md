@@ -1,203 +1,55 @@
-# frontend-kiddiz
+# 🎁 Kiddiz – Marketplace de jouets entre particuliers
 
-# 🎠 Kiddiz - Application Mobile
+**Kiddiz** est une application mobile qui permet aux particuliers de vendre et d’acheter des jouets pour enfants facilement. Conçue dans une logique écoresponsable et économique, elle favorise la seconde main tout en garantissant une expérience fluide et moderne.
 
-## 📝 Description
+## 🚀 Fonctionnalités principales
 
-**Kiddiz** est une application mobile de **vente et d'achat de jouets d'occasion** entre particuliers.
-Elle permet aux utilisateurs de publier des annonces, d'acheter des articles, d'échanger des messages et de gérer leurs transactions en toute simplicité.
+- 🔍 Parcourir les annonces de jouets disponibles
+- 📦 Publier un article à vendre avec image, titre, description et prix
+- ✏️ Modifier ses propres annonces
+- 🧒 Interface adaptée à une navigation mobile intuitive
 
-Développée avec **React Native** et **Expo**, l'application utilise **Redux** pour la gestion de l'état et **React Navigation** pour la navigation.
+## 🛠️ Stack technique
 
----
+### Backend
+- **Node.js**
+- **Express**
+- **MongoDB**
+- **Mongoose**
 
-## 📂 Structure du projet
+### Frontend
+- **React Native**
+- **Expo**
 
-```
-📦 kiddiz-app
-├── 📁 components        # Composants réutilisables (boutons, barres de recherche, etc.)
-│   ├── ButtonBig.js
-│   ├── ButtonHalf.js
-│   ├── ButtonIcon.js
-│   ├── ButtonProfil.js
-│   ├── ButtonSmall.js
-│   ├── HeaderNavigation.js
-│   ├── RadioButton.js
-│   ├── SearchBar.js
-│   ├── WelcomeHome.js
-│
-├── 📁 screens          # Écrans principaux de l'application
-│   ├── AddArticlesScreen.js
-│   ├── ArticleScreen.js
-│   ├── ChatScreen.js
-│   ├── ConnectionScreen.js
-│   ├── FAQScreen.js
-│   ├── FavorisScreen.js
-│   ├── HomeScreen.js
-│   ├── InvoiceScreen.js
-│   ├── MessagerieScreen.js
-│   ├── ModifyArticleScreen.js
-│   ├── MyArticlesScreen.js
-│   ├── ProfilScreen.js
-│   ├── SellerScreen.js
-│   ├── SigninScreen.js
-│   ├── SignupScreen.js
-│   ├── TransactionsScreen.js
-│
-├── 📁 models           # Modèles de données
-│   ├── Article.js
-│   ├── ArticleTransaction.js
-│   ├── Client.js
-│
-├── 📁 redux            # Gestion de l'état global avec Redux
-│   ├── users.js
-│
-├── App.js              # Point d'entrée principal de l'application
-├── package.json        # Dépendances et scripts
-└── README.md           # Documentation du projet
-```
+## 👥 Projet collaboratif
 
----
+Ce projet a été réalisé en groupe de 4 dans le cadre d'une formation intensive au développement web fullstack, en 10 jours.
 
-## 🚀 Installation
+### 🎯 Méthodologie
+- Approche **agile**, avec sprints courts et itératifs
+- Mise en place progressive des fonctionnalités selon la logique MVP (Minimum Viable Product)
 
-### **1️⃣ Prérequis**
-- **Node.js** (v16+ recommandé)
-- **Expo CLI** (`npm install -g expo-cli`)
-- **Un appareil ou un émulateur iOS/Android**
+## 💻 Ma contribution
 
-### **2️⃣ Cloner le projet**
-```bash
-git clone https://github.com/votre-repo/kiddiz-app.git
-cd kiddiz-app
-```
+J’ai participé activement à la conception et au développement de l’application, en particulier sur :
 
-### **3️⃣ Installer les dépendances**
-```bash
-npm install
-```
+- 🔧 La mise en place des routes **POST** et **PATCH** pour la gestion des articles (création et modification)
+- 🗃️ La structuration de la base de données avec **Mongoose**
+- 🧪 Les tests des routes backend via **Postman**
+- 🔁 L’**implémentation des logiques backend côté frontend** (connexion aux endpoints, envoi de requêtes HTTP, gestion des réponses, intégration des données)
+- 🤝 La collaboration en équipe, les revues de code et la documentation technique
 
-### **4️⃣ Lancer l'application**
-```bash
-npm start
-```
-Puis, scannez le QR Code avec **Expo Go** sur votre téléphone ou exécutez sur un émulateur.
+## 🗺️ Schéma de la base de données
 
----
+Voici un aperçu du **modèle de données** utilisé dans le projet :
 
-## 🎨 **Fonctionnalités principales**
-
-✅ **Créer un compte et se connecter** (Signup / Signin)  
-✅ **Publier et modifier un article** (AddArticlesScreen, ModifyArticleScreen)  
-✅ **Acheter un article** (InvoiceScreen, TransactionsScreen)  
-✅ **Gérer ses annonces et favoris** (MyArticlesScreen, FavorisScreen)  
-✅ **Envoyer et recevoir des messages** (MessagerieScreen, ChatScreen)  
-✅ **Voir les vendeurs et leur profil** (SellerScreen, ProfilScreen)  
-✅ **Consulter une FAQ et de l'aide** (FAQScreen)  
-✅ **Barre de recherche et filtres avancés** (SearchBar)  
-
----
+![Schéma de la base de données](https://github.com/user-attachments/assets/ffdcaf77-cad9-474d-b5da-037bb9fe2223)
 
 ## 📸 Aperçu de l'application
 
-### Page d'accueil :
-![Accueil](assets/screenshots/home_screen.png)
-
-### Page de vente d'un article :
-![Ajout d'article](assets/screenshots/add_article_screen.png)
-
-### Chat avec un vendeur :
-![Messagerie](assets/screenshots/chat_screen.png)
-
----
-
-## 🔌 API Backend
-
-L'application communique avec un backend Node.js via différentes routes API :
-
-### 📍 Authentification
-
-- **POST** `/users/signup` → Créer un compte
-- **POST** `/users/signin` → Connexion
-
-### 📍 Articles
-
-- **GET** `/articles` → Récupérer tous les articles
-- **POST** `/articles` → Ajouter un article
-- **PUT** `/articles/:id` → Modifier un article
-- **DELETE** `/articles/:id` → Supprimer un article
-
-### 📍 Transactions
-
-- **PUT** `/articles/buy` → Acheter un article et mettre à jour le stock
-
-> ⚡ **Remarque** : Tous les appels API nécessitent un `token` utilisateur pour authentifier la requête.
-
----
-
-## 🚧 Roadmap
-
-✔️ **Phase 1** : Développement du MVP  
-✔️ **Phase 2** : Ajout du chat entre acheteurs/vendeurs  
-🔜 **Phase 3** : Intégration des paiements Stripe  
-🔜 **Phase 4** : Système d'évaluation des vendeurs  
-
----
-
-## ⚡ Commandes utiles Expo
-
-```bash
-# Lancer l'application en mode développement
-npx expo start
-
-# Lancer l'application sur Android
-npx expo start --android
-
-# Lancer l'application sur iOS (nécessite un Mac)
-npx expo start --ios
-
-# Générer un build pour Play Store/App Store
-eas build --platform android
-eas build --platform ios
-```
-
----
-
-## 🏗 **Développement & Contribution**
-
-Vous souhaitez contribuer ? Suivez ces étapes :
-
-1. **Forker** le repo
-2. **Créer une branche**
-   ```bash
-   git checkout -b feature/nom-de-la-fonctionnalité
-   ```
-3. **Coder 🚀**
-4. **Faire un commit**
-   ```bash
-   git commit -m "Ajout de la fonctionnalité X"
-   ```
-5. **Pousser les changements**
-   ```bash
-   git push origin feature/nom-de-la-fonctionnalité
-   ```
-6. **Ouvrir une pull request**
-
----
-
-## 📜 **Licence**
-Ce projet est sous **licence MIT**. Vous êtes libre de l'utiliser et de le modifier tant que vous mentionnez les auteurs originaux.
-
----
-
-## 💬 **Contact**
-📧 **Email** : contact@kiddiz.com  
-🌍 **Site Web** : [www.kiddiz.com](https://www.kiddiz.com)  
-🐙 **GitHub** : [@votre-github](https://github.com/votre-github)
-
----
-
-🔥 **Merci d'utiliser Kiddiz !** 🎠  
-Si vous aimez ce projet, ⭐ **étoilez-le** sur GitHub ! 
+Vous pouvez directement scanner ce qr code pour tester l'application :
+![image](https://github.com/user-attachments/assets/77c20645-6ab6-4320-8e98-8cab7a8b9c99)
 
 
+## 📅 Date
+Avril 2025
